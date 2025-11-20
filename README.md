@@ -6,14 +6,21 @@ A Retrieval-Augmented Generation (RAG) system that provides accurate medical cod
 
 This system helps healthcare professionals quickly identify the correct codes for medical conditions and procedures. For example:
 - Input: "COPD level 3"
-- Output: ICD-10-CM code, procedure codes, and relevant coding guidelines
+- Output: ICD-10-CM code J44.x, HCPCS oxygen equipment codes, revenue codes, and relevant coding guidelines
+
+## Currently Loaded: 12,729 Medical Codes
+
+- **ICD-10-CM**: 12,542 diagnosis codes (all chapters)
+- **HCPCS Level II**: 45 procedure, equipment, and supply codes
+- **UB-04 Revenue Codes**: 142 hospital billing codes
 
 ## Features
 
-- **Multi-Code System Support**: ICD-10-CM, ICD-10-PCS, CPT, HCPCS Level II
+- **Multi-Code System Support**: ICD-10-CM, HCPCS Level II, UB-04 Revenue Codes
 - **Intelligent Search**: Natural language queries to find appropriate codes
 - **Official Guidelines**: Integrated with CDC/NCHS and CMS official coding guidelines
-- **Context-Aware**: Provides location-specific and procedure-specific code recommendations
+- **Context-Aware**: Provides diagnosis, procedure, and billing codes for complete coding scenarios
+- **Real Use Cases**: Examples include COPD with oxygen therapy, diabetes management, emergency room visits
 
 ## Data Sources
 

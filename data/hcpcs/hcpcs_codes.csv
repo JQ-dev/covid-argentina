@@ -1,0 +1,46 @@
+code,description,category,code_system
+E0100,"Cane, includes canes of all materials, adjustable or fixed, with tip",Durable Medical Equipment,HCPCS Level II
+E0130,"Walker, rigid (pickup), adjustable or fixed height",Durable Medical Equipment,HCPCS Level II
+E0163,"Commode chair, mobile or stationary, with detachable arms",Durable Medical Equipment,HCPCS Level II
+E0601,Continuous positive airway pressure (CPAP) device,Durable Medical Equipment,HCPCS Level II
+A0425,"Ground mileage, per statute mile",Ambulance Services,HCPCS Level II
+A0428,"Ambulance service, basic life support, non-emergency transport (BLS)",Ambulance Services,HCPCS Level II
+A0429,"Ambulance service, basic life support, emergency transport (BLS-emergency)",Ambulance Services,HCPCS Level II
+A0433,"Advanced life support, level 2 (ALS 2)",Ambulance Services,HCPCS Level II
+J0129,"Injection, abatacept, 10 mg",Drugs Administered Other Than Oral Method,HCPCS Level II
+J0178,"Injection, aflibercept, 1 mg",Drugs Administered Other Than Oral Method,HCPCS Level II
+J1644,"Injection, heparin sodium, per 1000 units",Drugs Administered Other Than Oral Method,HCPCS Level II
+J1817,"Injection, insulin for administration through DME (insulin pump) per 50 units",Drugs Administered Other Than Oral Method,HCPCS Level II
+J2001,"Injection, lidocaine HCl for intravenous infusion, 10 mg",Drugs Administered Other Than Oral Method,HCPCS Level II
+J3420,"Injection, vitamin B-12 cyanocobalamin, up to 1000 mcg",Drugs Administered Other Than Oral Method,HCPCS Level II
+G0101,Cervical or vaginal cancer screening; pelvic and clinical breast examination,Procedures/Professional Services,HCPCS Level II
+G0103,Prostate cancer screening; prostate specific antigen test (PSA),Procedures/Professional Services,HCPCS Level II
+G0106,"Colorectal cancer screening; alternative to G0105, screening colonoscopy, barium enema",Procedures/Professional Services,HCPCS Level II
+G0180,Physician certification for Medicare-covered home health services,Procedures/Professional Services,HCPCS Level II
+G0202,"Screening mammography, bilateral (2-view film study of each breast)",Procedures/Professional Services,HCPCS Level II
+L0112,"Cranial cervical orthosis, congenital torticollis type",Orthotics,HCPCS Level II
+L0220,"Thoracic rib belt, custom fabricated",Orthotics,HCPCS Level II
+L1680,"Knee ankle foot orthosis (KAFO), single upright, free knee",Orthotics,HCPCS Level II
+L5000,"Partial foot, shoe insert with longitudinal arch, toe filler",Prosthetics,HCPCS Level II
+L5100,"Below knee, molded socket, shin, SACH foot",Prosthetics,HCPCS Level II
+A4206,"Syringe with needle, sterile, 1 cc or less, each",Medical Supplies,HCPCS Level II
+A4211,Supplies for self-administered injections,Medical Supplies,HCPCS Level II
+A4233,"Replacement battery, alkaline (other than J cell), for use with medically necessary home blood glucose monitor",Medical Supplies,HCPCS Level II
+A4253,"Blood glucose test or reagent strips for home blood glucose monitor, per 50 strips",Medical Supplies,HCPCS Level II
+A4554,"Disposable underpads, all sizes",Medical Supplies,HCPCS Level II
+E0424,"Stationary compressed gaseous oxygen system, rental",Oxygen and Equipment,HCPCS Level II
+E0431,"Portable gaseous oxygen system, rental",Oxygen and Equipment,HCPCS Level II
+E0445,Oximeter device for measuring blood oxygen levels non-invasively,Oxygen and Equipment,HCPCS Level II
+V2020,"Frames, purchases",Vision Services,HCPCS Level II
+V2100,"Sphere, single vision, plano to plus or minus 4.00, per lens",Vision Services,HCPCS Level II
+V2627,"Slab off prism, glass or plastic, per lens",Vision Services,HCPCS Level II
+V5008,Hearing screening,Hearing Services,HCPCS Level II
+V5014,Repair/modification of a hearing aid,Hearing Services,HCPCS Level II
+D0120,Periodic oral evaluation - established patient,Dental Services,HCPCS Level II
+D0150,Comprehensive oral evaluation - new or established patient,Dental Services,HCPCS Level II
+C1713,Anchor/screw for opposing bone-to-bone or soft tissue-to-bone,Outpatient PPS,HCPCS Level II
+C1725,"Catheter, transluminal angioplasty, non-laser",Outpatient PPS,HCPCS Level II
+C9145,"Injection, aprepitant, 1 mg",Outpatient PPS,HCPCS Level II
+Q0091,"Screening Papanicolaou smear; obtaining, preparing and conveyance of cervical or vaginal smear to laboratory",Temporary Codes,HCPCS Level II
+Q4081,"Injection, epoetin alfa, 100 units (for ESRD on dialysis)",Temporary Codes,HCPCS Level II
+S0630,Removal of sutures by a physician other than the physician who originally closed the wound,Non-Medicare,HCPCS Level II

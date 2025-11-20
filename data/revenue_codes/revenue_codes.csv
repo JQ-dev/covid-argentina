@@ -1,0 +1,143 @@
+code,description,category,code_system
+0100,All-Inclusive Rate,Accommodation,UB-04 Revenue Code
+0110,Room & Board - Private (One Bed),Accommodation,UB-04 Revenue Code
+0111,Room & Board - Private - Medical/General,Accommodation,UB-04 Revenue Code
+0112,Room & Board - Private - OB,Accommodation,UB-04 Revenue Code
+0113,Room & Board - Private - Pediatric,Accommodation,UB-04 Revenue Code
+0114,Room & Board - Private - Psychiatric,Accommodation,UB-04 Revenue Code
+0120,Room & Board - Semi-Private (Two Beds),Accommodation,UB-04 Revenue Code
+0130,Room & Board - Three and Four Beds,Accommodation,UB-04 Revenue Code
+0140,Room & Board - Deluxe Private,Accommodation,UB-04 Revenue Code
+0150,Room & Board - Ward (Five or More Beds),Accommodation,UB-04 Revenue Code
+0160,Other Room & Board,Accommodation,UB-04 Revenue Code
+0200,Intensive Care - General,Intensive Care,UB-04 Revenue Code
+0201,Intensive Care - Surgical,Intensive Care,UB-04 Revenue Code
+0202,Intensive Care - Medical,Intensive Care,UB-04 Revenue Code
+0203,Intensive Care - Pediatric,Intensive Care,UB-04 Revenue Code
+0204,Intensive Care - Psychiatric,Intensive Care,UB-04 Revenue Code
+0206,Intensive Care - Intermediate ICU,Intensive Care,UB-04 Revenue Code
+0207,Intensive Care - Burn Care,Intensive Care,UB-04 Revenue Code
+0208,Intensive Care - Trauma,Intensive Care,UB-04 Revenue Code
+0209,Intensive Care - Other,Intensive Care,UB-04 Revenue Code
+0210,Coronary Care - General,Coronary Care,UB-04 Revenue Code
+0211,Coronary Care - Myocardial Infarction,Coronary Care,UB-04 Revenue Code
+0212,Coronary Care - Pulmonary Care,Coronary Care,UB-04 Revenue Code
+0213,Coronary Care - Heart Transplant,Coronary Care,UB-04 Revenue Code
+0170,Nursery - Newborn Level I,Nursery,UB-04 Revenue Code
+0171,Nursery - Newborn Level II,Nursery,UB-04 Revenue Code
+0172,Nursery - Newborn Level III,Nursery,UB-04 Revenue Code
+0173,Nursery - Newborn Level IV,Nursery,UB-04 Revenue Code
+0174,Nursery - Other,Nursery,UB-04 Revenue Code
+0360,Operating Room Services - General,Operating Room,UB-04 Revenue Code
+0361,Operating Room Services - Minor Surgery,Operating Room,UB-04 Revenue Code
+0362,Operating Room Services - Organ Transplant,Operating Room,UB-04 Revenue Code
+0367,Operating Room Services - Kidney Transplant,Operating Room,UB-04 Revenue Code
+0369,Operating Room Services - Other,Operating Room,UB-04 Revenue Code
+0370,Anesthesia - General,Anesthesia,UB-04 Revenue Code
+0371,Anesthesia - Incident to Radiology,Anesthesia,UB-04 Revenue Code
+0372,Anesthesia - Incident to Other Diagnostic Services,Anesthesia,UB-04 Revenue Code
+0379,Anesthesia - Other,Anesthesia,UB-04 Revenue Code
+0300,Laboratory - General,Laboratory,UB-04 Revenue Code
+0301,Laboratory - Chemistry,Laboratory,UB-04 Revenue Code
+0302,Laboratory - Immunology,Laboratory,UB-04 Revenue Code
+0303,Laboratory - Renal Patient (Home),Laboratory,UB-04 Revenue Code
+0304,Laboratory - Non-Routine Dialysis,Laboratory,UB-04 Revenue Code
+0305,Laboratory - Hematology,Laboratory,UB-04 Revenue Code
+0306,Laboratory - Bacteriology & Microbiology,Laboratory,UB-04 Revenue Code
+0307,Laboratory - Urology,Laboratory,UB-04 Revenue Code
+0309,Laboratory - Other,Laboratory,UB-04 Revenue Code
+0310,Laboratory - Pathological - General,Laboratory,UB-04 Revenue Code
+0311,Laboratory - Pathological - Cytology,Laboratory,UB-04 Revenue Code
+0312,Laboratory - Pathological - Histology,Laboratory,UB-04 Revenue Code
+0314,Laboratory - Pathological - Biopsy,Laboratory,UB-04 Revenue Code
+0320,Radiology - Diagnostic - General,Radiology,UB-04 Revenue Code
+0321,Radiology - Diagnostic - Angiocardiography,Radiology,UB-04 Revenue Code
+0324,Radiology - Diagnostic - Chest X-Ray,Radiology,UB-04 Revenue Code
+0329,Radiology - Diagnostic - Other,Radiology,UB-04 Revenue Code
+0330,Radiology - Therapeutic - General,Radiology,UB-04 Revenue Code
+0331,Radiology - Therapeutic - Chemotherapy - Injected,Radiology,UB-04 Revenue Code
+0332,Radiology - Therapeutic - Chemotherapy - Oral,Radiology,UB-04 Revenue Code
+0333,Radiology - Therapeutic - Radiation Therapy,Radiology,UB-04 Revenue Code
+0335,Radiology - Therapeutic - Chemotherapy - IV,Radiology,UB-04 Revenue Code
+0339,Radiology - Therapeutic - Other,Radiology,UB-04 Revenue Code
+0340,Nuclear Medicine - General,Radiology,UB-04 Revenue Code
+0341,Nuclear Medicine - Diagnostic,Radiology,UB-04 Revenue Code
+0342,Nuclear Medicine - Therapeutic,Radiology,UB-04 Revenue Code
+0343,Nuclear Medicine - Diagnostic Radiopharmaceuticals,Radiology,UB-04 Revenue Code
+0344,Nuclear Medicine - Therapeutic Radiopharmaceuticals,Radiology,UB-04 Revenue Code
+0350,CT Scan - General,Radiology,UB-04 Revenue Code
+0351,CT Scan - Head Scan,Radiology,UB-04 Revenue Code
+0352,CT Scan - Body Scan,Radiology,UB-04 Revenue Code
+0359,CT Scan - Other,Radiology,UB-04 Revenue Code
+0610,MRI - General,MRI,UB-04 Revenue Code
+0611,MRI - Brain (including Brain Stem),MRI,UB-04 Revenue Code
+0612,MRI - Spinal Cord (including Spine),MRI,UB-04 Revenue Code
+0614,MRI - Lower Extremities,MRI,UB-04 Revenue Code
+0619,MRI - Other,MRI,UB-04 Revenue Code
+0250,Pharmacy - General,Pharmacy,UB-04 Revenue Code
+0251,Pharmacy - Generic Drugs,Pharmacy,UB-04 Revenue Code
+0252,Pharmacy - Non-Generic Drugs,Pharmacy,UB-04 Revenue Code
+0253,Pharmacy - Take Home Drugs,Pharmacy,UB-04 Revenue Code
+0254,Pharmacy - Drugs Incident to Other Diagnostic Services,Pharmacy,UB-04 Revenue Code
+0255,Pharmacy - Drugs Incident to Radiology,Pharmacy,UB-04 Revenue Code
+0257,Pharmacy - Non-Prescription,Pharmacy,UB-04 Revenue Code
+0258,Pharmacy - IV Solutions,Pharmacy,UB-04 Revenue Code
+0259,Pharmacy - Other,Pharmacy,UB-04 Revenue Code
+0450,Emergency Room - General,Emergency Room,UB-04 Revenue Code
+0451,Emergency Room - EM/EMTALA,Emergency Room,UB-04 Revenue Code
+0452,Emergency Room - Beyond EMTALA Screening,Emergency Room,UB-04 Revenue Code
+0456,Emergency Room - Urgent Care,Emergency Room,UB-04 Revenue Code
+0459,Emergency Room - Other,Emergency Room,UB-04 Revenue Code
+0420,Physical Therapy - General,Therapy Services,UB-04 Revenue Code
+0421,Physical Therapy - Visit Charge,Therapy Services,UB-04 Revenue Code
+0422,Physical Therapy - Hourly Charge,Therapy Services,UB-04 Revenue Code
+0423,Physical Therapy - Group Rate,Therapy Services,UB-04 Revenue Code
+0424,Physical Therapy - Evaluation or Re-Evaluation,Therapy Services,UB-04 Revenue Code
+0429,Physical Therapy - Other,Therapy Services,UB-04 Revenue Code
+0430,Occupational Therapy - General,Therapy Services,UB-04 Revenue Code
+0431,Occupational Therapy - Visit Charge,Therapy Services,UB-04 Revenue Code
+0432,Occupational Therapy - Hourly Charge,Therapy Services,UB-04 Revenue Code
+0433,Occupational Therapy - Group Rate,Therapy Services,UB-04 Revenue Code
+0434,Occupational Therapy - Evaluation or Re-Evaluation,Therapy Services,UB-04 Revenue Code
+0439,Occupational Therapy - Other,Therapy Services,UB-04 Revenue Code
+0440,Speech-Language Pathology - General,Therapy Services,UB-04 Revenue Code
+0441,Speech-Language Pathology - Visit Charge,Therapy Services,UB-04 Revenue Code
+0442,Speech-Language Pathology - Hourly Charge,Therapy Services,UB-04 Revenue Code
+0443,Speech-Language Pathology - Group Rate,Therapy Services,UB-04 Revenue Code
+0444,Speech-Language Pathology - Evaluation or Re-Evaluation,Therapy Services,UB-04 Revenue Code
+0449,Speech-Language Pathology - Other,Therapy Services,UB-04 Revenue Code
+0480,Cardiology - General,Cardiology,UB-04 Revenue Code
+0481,Cardiology - Cardiac Catheterization Lab,Cardiology,UB-04 Revenue Code
+0482,Cardiology - Stress Test,Cardiology,UB-04 Revenue Code
+0483,Cardiology - Echocardiology,Cardiology,UB-04 Revenue Code
+0489,Cardiology - Other,Cardiology,UB-04 Revenue Code
+0710,Recovery Room - General,Recovery Room,UB-04 Revenue Code
+0711,Recovery Room - Post ICU,Recovery Room,UB-04 Revenue Code
+0719,Recovery Room - Other,Recovery Room,UB-04 Revenue Code
+0270,Medical/Surgical Supplies - General,Supplies,UB-04 Revenue Code
+0271,Medical/Surgical Supplies - Non-Sterile Supply,Supplies,UB-04 Revenue Code
+0272,Medical/Surgical Supplies - Sterile Supply,Supplies,UB-04 Revenue Code
+0273,Medical/Surgical Supplies - Take Home Supplies,Supplies,UB-04 Revenue Code
+0274,Medical/Surgical Supplies - Prosthetic/Orthotic Devices,Supplies,UB-04 Revenue Code
+0275,Medical/Surgical Supplies - Pacemaker,Supplies,UB-04 Revenue Code
+0276,Medical/Surgical Supplies - Intraocular Lens,Supplies,UB-04 Revenue Code
+0277,Medical/Surgical Supplies - Oxygen - Take Home,Supplies,UB-04 Revenue Code
+0278,Medical/Surgical Supplies - Other Implants,Supplies,UB-04 Revenue Code
+0279,Medical/Surgical Supplies - Other,Supplies,UB-04 Revenue Code
+0380,Blood - General,Blood,UB-04 Revenue Code
+0381,Blood - Packed Red Cells,Blood,UB-04 Revenue Code
+0382,Blood - Whole Blood,Blood,UB-04 Revenue Code
+0383,Blood - Plasma,Blood,UB-04 Revenue Code
+0384,Blood - Platelets,Blood,UB-04 Revenue Code
+0385,Blood - Leukocytes,Blood,UB-04 Revenue Code
+0386,Blood - Other Components,Blood,UB-04 Revenue Code
+0387,Blood - Other Derivatives,Blood,UB-04 Revenue Code
+0389,Blood - Other,Blood,UB-04 Revenue Code
+0390,"Blood - Blood Admin, Processing, Storage",Blood,UB-04 Revenue Code
+0760,Observation Room - General,Observation,UB-04 Revenue Code
+0762,Observation Room - Beyond First Day,Observation,UB-04 Revenue Code
+0920,Other Diagnostic Services - General,Other Diagnostic,UB-04 Revenue Code
+0921,Other Diagnostic Services - Peripheral Vascular Lab,Other Diagnostic,UB-04 Revenue Code
+0922,Other Diagnostic Services - Electrocardiology (EKG/ECG),Other Diagnostic,UB-04 Revenue Code
+0923,Other Diagnostic Services - Electroencephalogram (EEG),Other Diagnostic,UB-04 Revenue Code
+0929,Other Diagnostic Services - Other,Other Diagnostic,UB-04 Revenue Code
