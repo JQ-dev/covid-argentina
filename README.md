@@ -8,23 +8,37 @@ This system helps healthcare professionals quickly identify the correct codes fo
 - Input: "COPD level 3"
 - Output: ICD-10-CM code J44.x, HCPCS oxygen equipment codes, revenue codes, and relevant coding guidelines
 
-## Currently Loaded: 29,872 Medical Codes
+## Currently Loaded: 29,872 Medical Codes + 175 Medical Terms
 
+### Medical Codes
 - **ICD-10-CM**: 12,542 diagnosis codes (all 21 chapters)
 - **HCPCS Level II**: 13,593 procedure, equipment, and supply codes
 - **CPT**: 3,595 current procedural terminology codes
 - **UB-04 Revenue Codes**: 142 hospital billing codes
 
+### Medical Terminology Database
+- **175 medical terminology entries**:
+  - 43 Prefixes (hyper-, hypo-, brady-, tachy-, etc.)
+  - 43 Suffixes (-itis, -ectomy, -osis, -pathy, etc.)
+  - 52 Root Words organized by body system (cardi/o, gastr/o, nephr/o, etc.)
+  - 37 Common Abbreviations (COPD, MI, CHF, DVT, etc.)
+
 ## Features
 
 - **Multi-Code System Support**: ICD-10-CM, HCPCS Level II, CPT, UB-04 Revenue Codes
 - **Intelligent Search**: Natural language queries to find appropriate codes
+- **Medical Terminology Database**: Professional terminology support
+  - Decode medical terms (prefix + root + suffix breakdown)
+  - Look up medical abbreviations with examples
+  - 175 entries covering all major body systems
+  - Integrated with RAG responses for professional explanations
 - **Official Coding Guidelines**: Comprehensive ICD-10-CM coding guidelines and conventions
 - **Exam Preparation**: Designed to help pass CPC (AAPC) and CCS (AHIMA) certification exams
   - 28 Multiple Choice Questions covering ICD-10-CM, CPT, and HCPCS
   - 5 Medical Record Coding Cases (inpatient, outpatient, ED, surgical, procedural)
   - Complete answer keys with detailed rationales
   - Coverage of common exam topics: COPD, diabetes, MI, injuries, E&M coding
+  - Medical terminology fundamentals for professional coding
 - **Context-Aware**: Provides diagnosis, procedure, and billing codes for complete coding scenarios
 - **Real Use Cases**: Examples include COPD with oxygen therapy, diabetes management, emergency room visits
 
@@ -126,14 +140,38 @@ This system includes comprehensive materials to help you prepare for and pass me
   - Complete answer keys with detailed rationales
   - Common coding errors to avoid
 
+### Medical Terminology Fundamentals
+📚 **docs/Medical_Terminology_Fundamentals.md**
+- **Comprehensive Medical Terminology Guide**:
+  - 100+ prefixes (quantity, position, condition, negation)
+  - 75+ suffixes (diagnostic, procedural, descriptive)
+  - 50+ root words organized by body system
+  - 50+ common medical abbreviations
+  - Anatomical terminology and directional terms
+  - Practical decoding examples
+  - Integration with medical coding practice
+
 ### How to Use for Exam Prep
 
-1. **Study the Guidelines** first (docs/ICD10CM_Coding_Guidelines_Summary.md)
-2. **Take the MCQ Quiz** without looking at answers
-3. **Check your work** and understand the rationale
-4. **Code the Medical Records** - time yourself
-5. **Review the Answer Keys** - learn from mistakes
-6. **Repeat daily** until exam day
+1. **Master Medical Terminology** (docs/Medical_Terminology_Fundamentals.md)
+   - Learn prefixes, suffixes, and root words
+   - Practice decoding medical terms
+   - Memorize common abbreviations
+2. **Study the Guidelines** (docs/ICD10CM_Coding_Guidelines_Summary.md)
+   - Understand conventions (NEC, NOS, Excludes1/2)
+   - Learn chapter-specific rules
+3. **Take the MCQ Quiz** (docs/CPC_CCS_Exam_Prep_MCQs.md)
+   - Answer without looking at keys
+   - Check your work and understand rationale
+4. **Code the Medical Records** (docs/Medical_Record_Coding_Cases.md)
+   - Time yourself (real exam conditions)
+   - Code all 5 cases completely
+5. **Review Answer Keys** - learn from mistakes
+6. **Use the CLI Tools** for practice:
+   - `python src/main.py decode [term]` - decode medical terms
+   - `python src/main.py abbrev [abbrev]` - look up abbreviations
+   - `python src/main.py query -q "[condition]"` - find codes
+7. **Repeat daily** until exam day
 
 ### Download Official Guidelines
 
@@ -163,16 +201,38 @@ ANTHROPIC_API_KEY=your_api_key_here
 
 ### Command Line Interface
 
+#### Query Medical Codes
 ```bash
 # Interactive mode
-python src/main.py
+python src/main.py query
 
 # Single query
-python src/main.py --query "COPD level 3"
+python src/main.py query -q "COPD level 3"
+
+# Filter by code system
+python src/main.py query -q "diabetes" -c icd10cm
+```
+
+#### Medical Terminology Commands
+```bash
+# Decode a medical term
+python src/main.py decode tachycardia
+# Output: tachy- (fast) + cardi/o (heart) + -ia (condition) = fast heart condition
+
+# Look up an abbreviation
+python src/main.py abbrev COPD
+# Output: Chronic Obstructive Pulmonary Disease
+
+# View terminology statistics
+python src/main.py terminology
+
+# System information
+python src/main.py info
 ```
 
 ### Python API
 
+#### Query Codes
 ```python
 from src.rag_system import MedicalCodingRAG
 
@@ -186,6 +246,25 @@ print(f"Primary Code: {result['primary_code']}")
 print(f"Description: {result['description']}")
 print(f"Guidelines: {result['guidelines']}")
 print(f"Related Codes: {result['related_codes']}")
+```
+
+#### Medical Terminology API
+```python
+from src.rag_system import MedicalCodingRAG
+
+rag = MedicalCodingRAG()
+
+# Decode medical term
+decoded = rag.decode_medical_term("gastroenteritis")
+print(decoded['constructed_meaning'])  # stomach + intestine + inflammation
+
+# Look up abbreviation
+abbrev = rag.lookup_abbreviation("MI")
+print(abbrev['meaning'])  # Myocardial Infarction
+
+# Get terminology statistics
+stats = rag.get_terminology_stats()
+print(f"Total entries: {stats['total_entries']}")
 ```
 
 ## Project Structure

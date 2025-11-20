@@ -4,6 +4,7 @@ Handles query processing, retrieval, and code generation.
 """
 
 import os
+import pandas as pd
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -42,6 +43,9 @@ class MedicalCodingRAG:
                 "Please run 'python src/build_index.py' first."
             )
 
+        # Load medical terminology database
+        self.terminology = self._load_medical_terminology()
+
         # Initialize embeddings
         self.embeddings = get_embeddings()
 
@@ -70,7 +74,8 @@ class MedicalCodingRAG:
 
     def _create_qa_chain(self) -> RetrievalQA:
         """Create the question-answering chain."""
-        prompt_template = """You are an expert medical coder with deep knowledge of ICD-10-CM, ICD-10-PCS, CPT, and HCPCS coding systems.
+        prompt_template = """You are an expert medical coder with deep knowledge of ICD-10-CM, ICD-10-PCS, CPT, and HCPCS coding systems,
+and comprehensive understanding of medical terminology including prefixes, suffixes, root words, and abbreviations.
 
 Based on the following context from official coding manuals and guidelines, provide accurate medical codes for the query.
 
@@ -81,18 +86,25 @@ Query: {question}
 
 Please provide:
 1. The most appropriate primary code(s)
-2. A clear description of what the code represents
-3. Any relevant coding guidelines or notes
-4. Related or alternative codes that might be relevant
-5. Important coding considerations (e.g., sequencing, combination codes, excludes notes)
+2. A clear description of what the code represents, using proper medical terminology
+3. Medical terminology breakdown if relevant (explain prefixes, suffixes, root words)
+4. Any relevant coding guidelines or notes from official ICD-10-CM/CPT/HCPCS guidelines
+5. Related or alternative codes that might be relevant
+6. Important coding considerations (e.g., sequencing, combination codes, excludes notes, 7th characters)
+7. For abbreviations used, provide their full medical meanings
+
+Use professional medical terminology throughout your response. Break down complex medical terms into their components
+(prefix + root + suffix) when helpful for understanding.
 
 Format your response as a structured JSON with the following fields:
 - primary_code: The main code(s) to use
-- description: Clear description of the code
-- code_system: Which coding system (ICD-10-CM, ICD-10-PCS, etc.)
-- guidelines: Relevant coding guidelines
+- description: Clear description of the code with proper medical terminology
+- medical_terminology: Breakdown of relevant medical terms used
+- code_system: Which coding system (ICD-10-CM, ICD-10-PCS, CPT, HCPCS)
+- guidelines: Relevant coding guidelines from official sources
 - related_codes: List of related codes with descriptions
-- considerations: Important notes for proper code assignment
+- considerations: Important notes for proper code assignment including sequencing rules
+- abbreviations_used: Definitions of any medical abbreviations in the response
 
 Answer:"""
 
@@ -255,3 +267,138 @@ Answer:"""
         """
         result = self.query(f"What are the coding guidelines for {condition}?")
         return result.get("guidelines", "No guidelines found")
+
+    def _load_medical_terminology(self) -> pd.DataFrame:
+        """
+        Load medical terminology database.
+
+        Returns:
+            DataFrame with medical terminology (prefixes, suffixes, roots, abbreviations)
+        """
+        terminology_path = self.data_dir / "medical_terminology" / "medical_terminology.csv"
+
+        if terminology_path.exists():
+            return pd.read_csv(terminology_path)
+        else:
+            # Return empty DataFrame with expected columns if file doesn't exist
+            return pd.DataFrame(columns=['term', 'category', 'meaning', 'example', 'usage'])
+
+    def decode_medical_term(self, term: str) -> Dict[str, Any]:
+        """
+        Decode a medical term using the terminology database.
+
+        Args:
+            term: Medical term to decode (e.g., "gastroenteritis", "tachycardia")
+
+        Returns:
+            Dictionary with term breakdown and meaning
+        """
+        if self.terminology.empty:
+            return {"error": "Medical terminology database not loaded"}
+
+        term_lower = term.lower()
+        breakdown = []
+
+        # Search for prefixes
+        prefixes = self.terminology[self.terminology['category'] == 'Prefix']
+        for _, row in prefixes.iterrows():
+            prefix = row['term'].rstrip('-')
+            if term_lower.startswith(prefix):
+                breakdown.append({
+                    "component": row['term'],
+                    "type": "prefix",
+                    "meaning": row['meaning'],
+                    "example": row['example']
+                })
+                break
+
+        # Search for root words
+        roots = self.terminology[self.terminology['category'] == 'Root']
+        for _, row in roots.iterrows():
+            root = row['term'].rstrip('/o')
+            if root in term_lower:
+                breakdown.append({
+                    "component": row['term'],
+                    "type": "root",
+                    "meaning": row['meaning'],
+                    "example": row['example']
+                })
+
+        # Search for suffixes
+        suffixes = self.terminology[self.terminology['category'] == 'Suffix']
+        for _, row in suffixes.iterrows():
+            suffix = row['term'].lstrip('-')
+            if term_lower.endswith(suffix):
+                breakdown.append({
+                    "component": row['term'],
+                    "type": "suffix",
+                    "meaning": row['meaning'],
+                    "example": row['example']
+                })
+                break
+
+        if breakdown:
+            # Construct meaning from components
+            meanings = [comp['meaning'] for comp in breakdown]
+            return {
+                "term": term,
+                "breakdown": breakdown,
+                "constructed_meaning": " + ".join(meanings),
+                "found_components": len(breakdown)
+            }
+        else:
+            return {
+                "term": term,
+                "breakdown": [],
+                "message": "No matching components found in terminology database"
+            }
+
+    def lookup_abbreviation(self, abbreviation: str) -> Dict[str, Any]:
+        """
+        Look up a medical abbreviation.
+
+        Args:
+            abbreviation: Medical abbreviation (e.g., "COPD", "MI", "CHF")
+
+        Returns:
+            Dictionary with abbreviation meaning and usage
+        """
+        if self.terminology.empty:
+            return {"error": "Medical terminology database not loaded"}
+
+        abbrevs = self.terminology[self.terminology['category'] == 'Abbreviation']
+        result = abbrevs[abbrevs['term'].str.upper() == abbreviation.upper()]
+
+        if not result.empty:
+            row = result.iloc[0]
+            return {
+                "abbreviation": row['term'],
+                "meaning": row['meaning'],
+                "example": row['example'],
+                "usage": row['usage']
+            }
+        else:
+            return {
+                "abbreviation": abbreviation,
+                "message": "Abbreviation not found in terminology database"
+            }
+
+    def get_terminology_stats(self) -> Dict[str, Any]:
+        """
+        Get statistics about the medical terminology database.
+
+        Returns:
+            Dictionary with terminology statistics
+        """
+        if self.terminology.empty:
+            return {"error": "Medical terminology database not loaded"}
+
+        return {
+            "total_entries": len(self.terminology),
+            "by_category": self.terminology['category'].value_counts().to_dict(),
+            "by_usage": self.terminology['usage'].value_counts().head(10).to_dict(),
+            "prefixes": len(self.terminology[self.terminology['category'] == 'Prefix']),
+            "suffixes": len(self.terminology[self.terminology['category'] == 'Suffix']),
+            "root_words": len(self.terminology[self.terminology['category'] == 'Root']),
+            "abbreviations": len(self.terminology[self.terminology['category'] == 'Abbreviation'])
+        }

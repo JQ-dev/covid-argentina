@@ -1,0 +1,176 @@
+term,category,meaning,example,usage
+a-,Prefix,"without, not",anemia - without blood,Quantity/Size
+an-,Prefix,"without, not",anoxia - without oxygen,Quantity/Size
+bi-,Prefix,two,bilateral - both sides,Quantity/Size
+mono-,Prefix,one,monocyte - single nucleus cell,Quantity/Size
+di-,Prefix,two,diabetes - passing through,Quantity/Size
+tri-,Prefix,three,tricuspid - three cusps,Quantity/Size
+quad-,Prefix,four,quadriplegia - paralysis of four limbs,Quantity/Size
+poly-,Prefix,"many, much",polyuria - excessive urination,Quantity/Size
+multi-,Prefix,many,multifocal - multiple locations,Quantity/Size
+macro-,Prefix,large,macrocyte - large red blood cell,Quantity/Size
+micro-,Prefix,small,microcephaly - small head,Quantity/Size
+mega-,Prefix,large,megacolon - enlarged colon,Quantity/Size
+ab-,Prefix,away from,abduction - movement away from midline,Position/Direction
+ad-,Prefix,toward,adduction - movement toward midline,Position/Direction
+ante-,Prefix,"before, forward",antepartum - before childbirth,Position/Direction
+post-,Prefix,"after, behind",postoperative - after surgery,Position/Direction
+pre-,Prefix,before,prenatal - before birth,Position/Direction
+retro-,Prefix,"backward, behind",retroperitoneal - behind peritoneum,Position/Direction
+sub-,Prefix,"below, under",subcutaneous - under the skin,Position/Direction
+super-,Prefix,"above, over",suprapubic - above the pubis,Position/Direction
+supra-,Prefix,"above, over",supraventricular - above ventricles,Position/Direction
+infra-,Prefix,below,infraorbital - below the orbit,Position/Direction
+inter-,Prefix,between,intercostal - between ribs,Position/Direction
+intra-,Prefix,within,intravenous - within a vein,Position/Direction
+peri-,Prefix,around,pericardium - sac around heart,Position/Direction
+circum-,Prefix,around,circumference - distance around,Position/Direction
+trans-,Prefix,"across, through",transdermal - through the skin,Position/Direction
+endo-,Prefix,within,endoscopy - looking within,Position/Direction
+exo-,Prefix,outside,exocrine - secreting outward,Position/Direction
+extra-,Prefix,outside,extracellular - outside cell,Position/Direction
+hyper-,Prefix,"excessive, above",hypertension - high blood pressure,Condition/Quality
+hypo-,Prefix,"deficient, below",hypothyroid - underactive thyroid,Condition/Quality
+brady-,Prefix,slow,bradycardia - slow heart rate,Condition/Quality
+tachy-,Prefix,fast,tachypnea - rapid breathing,Condition/Quality
+dys-,Prefix,"bad, difficult, painful",dyspnea - difficult breathing,Condition/Quality
+eu-,Prefix,"good, normal",eupnea - normal breathing,Condition/Quality
+mal-,Prefix,bad,malnutrition - poor nutrition,Condition/Quality
+pan-,Prefix,all,pancytopenia - deficiency of all blood cells,Condition/Quality
+neo-,Prefix,new,neoplasm - new growth (tumor),Condition/Quality
+pseudo-,Prefix,false,pseudocyst - false cyst,Condition/Quality
+anti-,Prefix,against,antibiotic - against bacteria,Negation
+contra-,Prefix,"against, opposite",contraindicated - not recommended,Negation
+de-,Prefix,"removal, reversal",dehydration - removal of water,Negation
+-algia,Suffix,pain,neuralgia - nerve pain,Diagnostic/Condition
+-dynia,Suffix,pain,pleurodynia - chest wall pain,Diagnostic/Condition
+-emia,Suffix,blood condition,anemia - low red blood cells,Diagnostic/Condition
+-itis,Suffix,inflammation,appendicitis - appendix inflammation,Diagnostic/Condition
+-osis,Suffix,abnormal condition,nephrosis - kidney disease,Diagnostic/Condition
+-pathy,Suffix,disease,neuropathy - nerve disease,Diagnostic/Condition
+-megaly,Suffix,enlargement,hepatomegaly - enlarged liver,Diagnostic/Condition
+-malacia,Suffix,softening,osteomalacia - bone softening,Diagnostic/Condition
+-sclerosis,Suffix,hardening,arteriosclerosis - artery hardening,Diagnostic/Condition
+-stenosis,Suffix,narrowing,aortic stenosis - aortic valve narrowing,Diagnostic/Condition
+-ectasis,Suffix,"dilation, expansion",bronchiectasis - bronchial dilation,Diagnostic/Condition
+-rrhage,Suffix,excessive bleeding,hemorrhage - excessive bleeding,Diagnostic/Condition
+-rrhagia,Suffix,excessive bleeding,menorrhagia - heavy menstrual bleeding,Diagnostic/Condition
+-rrhea,Suffix,"flow, discharge",diarrhea - watery stool discharge,Diagnostic/Condition
+-rrhexis,Suffix,rupture,cardiorrhexis - heart rupture,Diagnostic/Condition
+-plegia,Suffix,paralysis,hemiplegia - one-sided paralysis,Diagnostic/Condition
+-plasia,Suffix,"formation, growth",hyperplasia - excessive cell growth,Diagnostic/Condition
+-trophy,Suffix,"development, nourishment",hypertrophy - increase in size,Diagnostic/Condition
+-oma,Suffix,"tumor, mass",carcinoma - cancerous tumor,Diagnostic/Condition
+-cele,Suffix,"hernia, protrusion",rectocele - rectal hernia,Diagnostic/Condition
+-ptosis,Suffix,"drooping, sagging",nephroptosis - drooping kidney,Diagnostic/Condition
+-penia,Suffix,deficiency,leukopenia - low white blood cells,Diagnostic/Condition
+-ectomy,Suffix,surgical removal,appendectomy - appendix removal,Surgical Procedure
+-otomy,Suffix,cutting into,tracheotomy - cutting into trachea,Surgical Procedure
+-ostomy,Suffix,creating opening,colostomy - colon opening,Surgical Procedure
+-plasty,Suffix,surgical repair,rhinoplasty - nose repair,Surgical Procedure
+-rraphy,Suffix,suturing,herniorrhaphy - hernia repair,Surgical Procedure
+-pexy,Suffix,surgical fixation,nephropexy - kidney fixation,Surgical Procedure
+-desis,Suffix,surgical binding/fusion,arthrodesis - joint fusion,Surgical Procedure
+-tripsy,Suffix,crushing,lithotripsy - stone crushing,Surgical Procedure
+-centesis,Suffix,surgical puncture,thoracentesis - chest puncture,Diagnostic Procedure
+-scopy,Suffix,visual examination,colonoscopy - colon examination,Diagnostic Procedure
+-graphy,Suffix,process of recording,radiography - X-ray imaging,Diagnostic Procedure
+-gram,Suffix,"record, image",electrocardiogram - heart tracing,Diagnostic Procedure
+-lysis,Suffix,"breakdown, destruction",hemolysis - blood cell destruction,Procedure/Condition
+-ac,Suffix,pertaining to,cardiac - pertaining to heart,Descriptive
+-al,Suffix,pertaining to,renal - pertaining to kidney,Descriptive
+-ar,Suffix,pertaining to,muscular - pertaining to muscle,Descriptive
+-ic,Suffix,pertaining to,gastric - pertaining to stomach,Descriptive
+-ical,Suffix,pertaining to,surgical - pertaining to surgery,Descriptive
+-ous,Suffix,pertaining to,venous - pertaining to veins,Descriptive
+-oid,Suffix,resembling,mucoid - resembling mucus,Descriptive
+-form,Suffix,shaped like,fusiform - spindle-shaped,Descriptive
+cardi/o,Root,heart,"cardiology, myocardial",Cardiovascular System
+angi/o,Root,vessel,"angiography, angioplasty",Cardiovascular System
+arteri/o,Root,artery,arteriosclerosis,Cardiovascular System
+ven/o,Root,vein,"venous, intravenous",Cardiovascular System
+phleb/o,Root,vein,"phlebotomy, phlebitis",Cardiovascular System
+hem/o,Root,blood,"hematoma, hemoglobin",Cardiovascular System
+hemat/o,Root,blood,hematology,Cardiovascular System
+thromb/o,Root,clot,"thrombosis, thrombus",Cardiovascular System
+embol/o,Root,"plug, clot","embolism, embolus",Cardiovascular System
+pneum/o,Root,"lung, air","pneumonia, pneumothorax",Respiratory System
+pulm/o,Root,lung,pulmonary,Respiratory System
+bronch/o,Root,bronchus,"bronchitis, bronchoscopy",Respiratory System
+alveol/o,Root,alveolus (air sac),alveolar,Respiratory System
+laryng/o,Root,larynx (voice box),"laryngitis, laryngoscopy",Respiratory System
+trache/o,Root,trachea (windpipe),"tracheostomy, tracheal",Respiratory System
+nas/o,Root,nose,nasal,Respiratory System
+rhin/o,Root,nose,"rhinitis, rhinoplasty",Respiratory System
+pharyng/o,Root,pharynx (throat),pharyngitis,Respiratory System
+ox/o,Root,oxygen,"hypoxia, anoxia",Respiratory System
+capn/o,Root,carbon dioxide,hypercapnia,Respiratory System
+gastr/o,Root,stomach,"gastritis, gastric",Gastrointestinal System
+enter/o,Root,intestine,"gastroenteritis, enteral",Gastrointestinal System
+col/o,Root,colon,"colitis, colonoscopy",Gastrointestinal System
+hepat/o,Root,liver,"hepatitis, hepatomegaly",Gastrointestinal System
+cholecyst/o,Root,gallbladder,"cholecystitis, cholecystectomy",Gastrointestinal System
+pancreat/o,Root,pancreas,"pancreatitis, pancreatic",Gastrointestinal System
+esophag/o,Root,esophagus,"esophageal, esophagitis",Gastrointestinal System
+proct/o,Root,"rectum, anus","proctology, proctoscopy",Gastrointestinal System
+nephr/o,Root,kidney,"nephrology, nephropathy",Urinary System
+ren/o,Root,kidney,renal,Urinary System
+ur/o,Root,"urine, urinary tract","urology, urinalysis",Urinary System
+cyst/o,Root,"bladder, sac","cystitis, cystoscopy",Urinary System
+ureter/o,Root,ureter,"ureteral, ureteroscopy",Urinary System
+urethr/o,Root,urethra,"urethritis, urethral",Urinary System
+oste/o,Root,bone,"osteoporosis, osteomyelitis",Musculoskeletal System
+arthr/o,Root,joint,"arthritis, arthroscopy",Musculoskeletal System
+my/o,Root,muscle,"myopathy, myocardial",Musculoskeletal System
+chondr/o,Root,cartilage,"chondromalacia, chondral",Musculoskeletal System
+ten/o,Root,tendon,"tendonitis, tendinopathy",Musculoskeletal System
+cost/o,Root,rib,"costal, intercostal",Musculoskeletal System
+neur/o,Root,nerve,"neurology, neuropathy",Nervous System
+cerebr/o,Root,cerebrum,"cerebral, cerebrovascular",Nervous System
+encephal/o,Root,brain,"encephalopathy, encephalitis",Nervous System
+mening/o,Root,meninges,"meningitis, meningeal",Nervous System
+myel/o,Root,"spinal cord, bone marrow","myelopathy, myeloma",Nervous System
+glyc/o,Root,"sugar, glucose","glycemia, hypoglycemia",Endocrine System
+gluc/o,Root,"sugar, glucose",glucose,Endocrine System
+thyr/o,Root,thyroid,"thyroid, hypothyroid",Endocrine System
+adren/o,Root,adrenal gland,"adrenal, adrenaline",Endocrine System
+derm/o,Root,skin,"dermatology, dermatitis",Integumentary System
+dermat/o,Root,skin,dermatologist,Integumentary System
+cutane/o,Root,skin,"subcutaneous, cutaneous",Integumentary System
+BP,Abbreviation,Blood Pressure,BP 120/80,Vital Signs
+HR,Abbreviation,Heart Rate,HR 75 bpm,Vital Signs
+RR,Abbreviation,Respiratory Rate,RR 16,Vital Signs
+T,Abbreviation,Temperature,T 98.6°F,Vital Signs
+SpO2,Abbreviation,Oxygen Saturation,SpO2 98%,Vital Signs
+MI,Abbreviation,Myocardial Infarction,Acute MI,Cardiovascular
+CHF,Abbreviation,Congestive Heart Failure,CHF exacerbation,Cardiovascular
+COPD,Abbreviation,Chronic Obstructive Pulmonary Disease,COPD with exacerbation,Respiratory
+CAD,Abbreviation,Coronary Artery Disease,History of CAD,Cardiovascular
+CVA,Abbreviation,Cerebrovascular Accident,Acute CVA (stroke),Neurological
+DM,Abbreviation,Diabetes Mellitus,Type 2 DM,Endocrine
+HTN,Abbreviation,Hypertension,Essential HTN,Cardiovascular
+UTI,Abbreviation,Urinary Tract Infection,Recurrent UTI,Urinary
+DVT,Abbreviation,Deep Vein Thrombosis,Left leg DVT,Cardiovascular
+PE,Abbreviation,Pulmonary Embolism,Acute PE,Respiratory
+CKD,Abbreviation,Chronic Kidney Disease,CKD Stage 3,Urinary
+CBC,Abbreviation,Complete Blood Count,CBC ordered,Laboratory
+BMP,Abbreviation,Basic Metabolic Panel,BMP results,Laboratory
+CMP,Abbreviation,Comprehensive Metabolic Panel,CMP ordered,Laboratory
+ABG,Abbreviation,Arterial Blood Gas,ABG shows hypoxia,Laboratory
+HbA1c,Abbreviation,Hemoglobin A1c,HbA1c 7.2%,Laboratory
+TSH,Abbreviation,Thyroid Stimulating Hormone,TSH elevated,Laboratory
+PT/INR,Abbreviation,Prothrombin Time/International Normalized Ratio,INR 2.5,Laboratory
+CXR,Abbreviation,Chest X-Ray,CXR shows infiltrate,Radiology
+CT,Abbreviation,Computed Tomography,CT scan abdomen,Radiology
+MRI,Abbreviation,Magnetic Resonance Imaging,MRI brain,Radiology
+US,Abbreviation,Ultrasound,US abdomen,Radiology
+EKG,Abbreviation,Electrocardiogram,EKG shows STEMI,Diagnostic
+PO,Abbreviation,by mouth (per os),PO medication,Medication
+IV,Abbreviation,intravenous,IV antibiotics,Medication
+IM,Abbreviation,intramuscular,IM injection,Medication
+SubQ,Abbreviation,subcutaneous,SubQ insulin,Medication
+bid,Abbreviation,twice daily,Metformin 1000mg bid,Medication
+tid,Abbreviation,three times daily,Amoxicillin tid,Medication
+qid,Abbreviation,four times daily,Pain medication qid,Medication
+prn,Abbreviation,as needed,Tylenol prn pain,Medication
+stat,Abbreviation,immediately,Labs stat,Medical Order

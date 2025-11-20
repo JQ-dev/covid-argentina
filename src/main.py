@@ -105,6 +105,108 @@ def query(query: Optional[str], code_system: str):
 
 
 @cli.command()
+@click.argument('term')
+def decode(term: str):
+    """Decode a medical term into its components (prefix + root + suffix)."""
+    try:
+        rag = MedicalCodingRAG()
+        result = rag.decode_medical_term(term)
+
+        if "error" in result:
+            console.print(f"[bold red]Error:[/bold red] {result['error']}")
+            return
+
+        console.print(Panel(
+            f"[bold]Medical Term:[/bold] {result['term']}",
+            title="Medical Term Decoder",
+            border_style="cyan"
+        ))
+
+        if result.get('breakdown'):
+            console.print("\n[bold green]Component Breakdown:[/bold green]")
+            for comp in result['breakdown']:
+                console.print(
+                    f"\n  [bold]{comp['type'].upper()}:[/bold] {comp['component']}\n"
+                    f"  Meaning: {comp['meaning']}\n"
+                    f"  Example: {comp['example']}"
+                )
+
+            if result.get('constructed_meaning'):
+                console.print(Panel(
+                    result['constructed_meaning'],
+                    title="Constructed Meaning",
+                    border_style="green"
+                ))
+        else:
+            console.print(f"\n[yellow]{result.get('message', 'No breakdown available')}[/yellow]")
+
+    except Exception as e:
+        console.print(f"[bold red]Error:[/bold red] {str(e)}")
+        sys.exit(1)
+
+
+@cli.command()
+@click.argument('abbreviation')
+def abbrev(abbreviation: str):
+    """Look up a medical abbreviation."""
+    try:
+        rag = MedicalCodingRAG()
+        result = rag.lookup_abbreviation(abbreviation)
+
+        if "error" in result:
+            console.print(f"[bold red]Error:[/bold red] {result['error']}")
+            return
+
+        if "message" in result:
+            console.print(f"\n[yellow]{result['message']}[/yellow]")
+            return
+
+        console.print(Panel(
+            f"[bold]Abbreviation:[/bold] {result['abbreviation']}\n"
+            f"[bold]Meaning:[/bold] {result['meaning']}\n"
+            f"[bold]Usage:[/bold] {result['usage']}\n"
+            f"[bold]Example:[/bold] {result['example']}",
+            title="Medical Abbreviation",
+            border_style="blue"
+        ))
+
+    except Exception as e:
+        console.print(f"[bold red]Error:[/bold red] {str(e)}")
+        sys.exit(1)
+
+
+@cli.command()
+def terminology():
+    """Display medical terminology statistics."""
+    try:
+        rag = MedicalCodingRAG()
+        stats = rag.get_terminology_stats()
+
+        if "error" in stats:
+            console.print(f"[bold red]Error:[/bold red] {stats['error']}")
+            return
+
+        console.print(Panel(
+            "[bold]Medical Terminology Database Statistics[/bold]",
+            border_style="cyan"
+        ))
+
+        console.print(f"\n[bold]Total Entries:[/bold] {stats['total_entries']:,}")
+        console.print(f"  • Prefixes: {stats['prefixes']}")
+        console.print(f"  • Suffixes: {stats['suffixes']}")
+        console.print(f"  • Root Words: {stats['root_words']}")
+        console.print(f"  • Abbreviations: {stats['abbreviations']}")
+
+        console.print("\n[bold]Top Usage Categories:[/bold]")
+        for usage, count in list(stats['by_usage'].items())[:10]:
+            console.print(f"  • {usage}: {count}")
+
+    except Exception as e:
+        console.print(f"[bold red]Error:[/bold red] {str(e)}")
+        sys.exit(1)
+
+
+@cli.command()
 def info():
     """Display system information and data status."""
     from pathlib import Path
@@ -115,21 +217,30 @@ def info():
 
     # Check data directories
     icd10cm_dir = data_dir / "icd10cm"
-    icd10pcs_dir = data_dir / "icd10pcs"
+    hcpcs_dir = data_dir / "hcpcs"
+    cpt_dir = data_dir / "cpt"
+    revenue_dir = data_dir / "revenue_codes"
+    terminology_dir = data_dir / "medical_terminology"
     vector_db_dir = data_dir / "vector_db"
 
     console.print("\n[bold]Data Status:[/bold]")
     console.print(f"  ICD-10-CM: {'✓' if icd10cm_dir.exists() else '✗'} {icd10cm_dir}")
-    console.print(f"  ICD-10-PCS: {'✓' if icd10pcs_dir.exists() else '✗'} {icd10pcs_dir}")
+    console.print(f"  HCPCS: {'✓' if hcpcs_dir.exists() else '✗'} {hcpcs_dir}")
+    console.print(f"  CPT: {'✓' if cpt_dir.exists() else '✗'} {cpt_dir}")
+    console.print(f"  Revenue Codes: {'✓' if revenue_dir.exists() else '✗'} {revenue_dir}")
+    console.print(f"  Medical Terminology: {'✓' if terminology_dir.exists() else '✗'} {terminology_dir}")
     console.print(f"  Vector DB: {'✓' if vector_db_dir.exists() else '✗'} {vector_db_dir}")
 
     console.print("\n[bold]Next Steps:[/bold]")
-    if not icd10cm_dir.exists() or not icd10pcs_dir.exists():
-        console.print("  1. Run: [cyan]python src/data_loader.py --download-all[/cyan]")
     if not vector_db_dir.exists():
-        console.print("  2. Run: [cyan]python src/build_index.py[/cyan]")
-    if icd10cm_dir.exists() and vector_db_dir.exists():
-        console.print("  ✓ System is ready! Run: [cyan]python src/main.py query[/cyan]")
+        console.print("  1. Run: [cyan]python src/build_index.py[/cyan]")
+    else:
+        console.print("  ✓ System is ready!")
+        console.print("\n[bold]Available Commands:[/bold]")
+        console.print("  • [cyan]query[/cyan] - Query medical codes")
+        console.print("  • [cyan]decode[/cyan] - Decode medical terms")
+        console.print("  • [cyan]abbrev[/cyan] - Look up abbreviations")
+        console.print("  • [cyan]terminology[/cyan] - View terminology stats")
 
 
 if __name__ == "__main__":
