@@ -8,15 +8,16 @@ This system helps healthcare professionals quickly identify the correct codes fo
 - Input: "COPD level 3"
 - Output: ICD-10-CM code J44.x, HCPCS oxygen equipment codes, revenue codes, and relevant coding guidelines
 
-## Currently Loaded: 12,729 Medical Codes
+## Currently Loaded: 29,872 Medical Codes
 
-- **ICD-10-CM**: 12,542 diagnosis codes (all chapters)
-- **HCPCS Level II**: 45 procedure, equipment, and supply codes
+- **ICD-10-CM**: 12,542 diagnosis codes (all 21 chapters)
+- **HCPCS Level II**: 13,593 procedure, equipment, and supply codes
+- **CPT**: 3,595 current procedural terminology codes
 - **UB-04 Revenue Codes**: 142 hospital billing codes
 
 ## Features
 
-- **Multi-Code System Support**: ICD-10-CM, HCPCS Level II, UB-04 Revenue Codes
+- **Multi-Code System Support**: ICD-10-CM, HCPCS Level II, CPT, UB-04 Revenue Codes
 - **Intelligent Search**: Natural language queries to find appropriate codes
 - **Official Guidelines**: Integrated with CDC/NCHS and CMS official coding guidelines
 - **Context-Aware**: Provides diagnosis, procedure, and billing codes for complete coding scenarios
