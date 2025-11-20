@@ -19,7 +19,12 @@ This system helps healthcare professionals quickly identify the correct codes fo
 
 - **Multi-Code System Support**: ICD-10-CM, HCPCS Level II, CPT, UB-04 Revenue Codes
 - **Intelligent Search**: Natural language queries to find appropriate codes
-- **Official Guidelines**: Integrated with CDC/NCHS and CMS official coding guidelines
+- **Official Coding Guidelines**: Comprehensive ICD-10-CM coding guidelines and conventions
+- **Exam Preparation**: Designed to help pass CPC (AAPC) and CCS (AHIMA) certification exams
+  - 28 Multiple Choice Questions covering ICD-10-CM, CPT, and HCPCS
+  - 5 Medical Record Coding Cases (inpatient, outpatient, ED, surgical, procedural)
+  - Complete answer keys with detailed rationales
+  - Coverage of common exam topics: COPD, diabetes, MI, injuries, E&M coding
 - **Context-Aware**: Provides diagnosis, procedure, and billing codes for complete coding scenarios
 - **Real Use Cases**: Examples include COPD with oxygen therapy, diabetes management, emergency room visits
 
@@ -71,6 +76,70 @@ python src/data_loader.py --download-all
 ```
 
 This will download the latest ICD-10-CM and ICD-10-PCS code sets from official sources.
+
+## CPC/CCS Exam Preparation Materials
+
+This system includes comprehensive materials to help you prepare for and pass medical coding certification exams:
+
+### Official Coding Guidelines
+📘 **docs/ICD10CM_Coding_Guidelines_Summary.md**
+- Complete summary of ICD-10-CM Official Coding Guidelines
+- Section I: Conventions, General, and Chapter-Specific Guidelines
+- Section II: Selection of Principal Diagnosis (Inpatient)
+- Section III: Reporting Additional Diagnoses
+- Section IV: Outpatient Coding Guidelines
+- Key conventions: NEC, NOS, Excludes1, Excludes2, 7th characters
+- Chapter-specific guidelines for all 21 chapters
+- Common coding scenarios with explanations
+
+### Multiple Choice Questions
+📝 **docs/CPC_CCS_Exam_Prep_MCQs.md**
+- **28 Multiple Choice Questions** covering:
+  - ICD-10-CM Coding Conventions (Q1-Q3)
+  - COPD & Respiratory Diseases (Q4-Q6)
+  - Diabetes Mellitus (Q7-Q9)
+  - Injuries & External Causes (Q10-Q12)
+  - Signs, Symptoms & General Guidelines (Q13-Q15)
+  - Sequencing & Principal Diagnosis (Q16-Q18)
+  - Combination Codes (Q19-Q20)
+  - CPT E&M Coding (Q21-Q23)
+  - CPT Modifiers (Q24-Q25)
+  - HCPCS Level II (Q26-Q28)
+- Complete answer key with detailed explanations
+- Rationale for each answer
+- Study tips for CPC/CCS exams
+
+### Medical Record Coding Cases
+🏥 **docs/Medical_Record_Coding_Cases.md**
+- **5 Complete Medical Record Coding Cases**:
+  1. **Inpatient**: COPD Exacerbation with Respiratory Failure (ICU admission, complex sequencing)
+  2. **Outpatient**: New Patient Visit for Diabetes (multiple complications, E&M coding)
+  3. **Emergency Department**: Acute MI/STEMI (time-sensitive, critical care)
+  4. **Inpatient Surgery**: Hip Fracture (injury coding, external causes, ICD-10-PCS)
+  5. **Outpatient Procedure**: Screening Colonoscopy (preventive, pathology findings)
+- Each case includes:
+  - Complete patient history and documentation
+  - Physical exam findings
+  - Diagnostic studies
+  - Assessment and plan
+  - Coding assignment questions
+  - Complete answer keys with detailed rationales
+  - Common coding errors to avoid
+
+### How to Use for Exam Prep
+
+1. **Study the Guidelines** first (docs/ICD10CM_Coding_Guidelines_Summary.md)
+2. **Take the MCQ Quiz** without looking at answers
+3. **Check your work** and understand the rationale
+4. **Code the Medical Records** - time yourself
+5. **Review the Answer Keys** - learn from mistakes
+6. **Repeat daily** until exam day
+
+### Download Official Guidelines
+
+Download the official ICD-10-CM Guidelines PDF from:
+- **CDC FTP**: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2025/
+- **CMS**: https://www.cms.gov/files/document/fy-2025-icd-10-cm-coding-guidelines.pdf
 
 ### 2. Build the Vector Database
 
